@@ -28,9 +28,9 @@
                 <input name="fee" type="number" value="{{ fee }}" min="1" placeholder="Fee" required>
             </div>
             <div>
-                <label for="data">data :</label>
-                <input type="textarea" id="data" name="data" style="min-height: 100px;min-width: 300px;"
-                    placeholder="Please type your data" required />
+                <label for="message">message :</label>
+                <input type="textarea" id="message" name="message" style="min-height: 100px;min-width: 300px;"
+                    placeholder="Please type your message" required />
             </div>
         </div>
         <div>
@@ -38,7 +38,29 @@
         </div>
     </form>
     <div id="transaction_result" class="result"></div>
-
+    <div id="transaction_info" hidden>
+        <div>
+          <label>Height:</label>
+          <span id="tx_info_height"></span>
+        </div>
+        <div>
+          <label>TxHash:</label>
+          <!-- https://testnet.mintscan.io/celestia-incentivized-testnet/txs/80D8DDF683EB6B49F430FF3C9758AD2DE7A9526B72229B965E8FEAA8A47CB134?height=389613 -->
+          <span id="tx_info_tx_hash"></span>
+        </div>
+        <div>
+          <label>Datetime:</label>
+          <span id="tx_info_date"></span>
+        </div>    
+        <div>
+          <label>Gas_used:</label>
+          <span id="tx_info_gas_used"></span>
+        </div>    
+        <div>
+          <label>namespace_id</label>
+          <span id="tx_info_namespace_id"></span>
+        </div>
+      </div>
     <script src="/static/js/main.js"></script>
 </body>
 
