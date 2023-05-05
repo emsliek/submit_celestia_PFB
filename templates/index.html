@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -20,17 +21,15 @@
         <div style="margin-top: 30px;">
             <div>
                 <label>Gas limit</label>
-                <input name="gas_limit" type="number" value="{{ gas_limit }}" min="1"
-                    placeholder="Gas limit" required>
+                <input name="gas_limit" type="number" value="{{ gas_limit }}" min="1" placeholder="Gas limit" required>
             </div>
             <div>
                 <label>Fee</label>
-                <input name="fee" type="number" value="{{ fee }}" min="1" placeholder="Fee"
-                    required>
+                <input name="fee" type="number" value="{{ fee }}" min="1" placeholder="Fee" required>
             </div>
             <div>
                 <label for="data">data :</label>
-                <input type="textarea" id="msg" name="msg" style="min-height: 100px;min-width: 300px;"
+                <input type="textarea" id="data" name="data" style="min-height: 100px;min-width: 300px;"
                     placeholder="Please type your data" required />
             </div>
         </div>
@@ -38,6 +37,9 @@
             <button type="submit" id="submit">submit</button>
         </div>
     </form>
+    <div id="transaction_result" class="result"></div>
+
     <script src="/static/js/main.js"></script>
 </body>
+
 </html>
