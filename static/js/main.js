@@ -30,9 +30,9 @@
             }
             throw new Error('Data error');
         }).then(data => {
-            document.getElementById("transaction_result").innerHTML = "Submit Success";
+            document.getElementById("transaction_result").innerHTML = "<h3 style='color:green'>Submit Success</h3>";
             document.getElementById("transaction_info").hidden = false
-            document.getElementById("tx_info_tx_hash").innerHTML = data.txhash;
+            document.getElementById("tx_info_tx_hash").innerHTML = "<a target='_blank' href='https://testnet.mintscan.io/celestia-incentivized-testnet/txs/" + data.txhash + "?height=" + data.height + "'>" + data.txhash + "</a>";
             document.getElementById("tx_info_height").innerHTML = data.height;
             document.getElementById("tx_info_date").textContent = data.date;
             document.getElementById("tx_info_namespace_id").innerHTML = data.namespace_id;
@@ -40,7 +40,7 @@
 
             return data;
         }).catch(err => {
-            document.getElementById("transaction_result").innerHTML = "Failed, Please make sure the celestia node is available and try again!";
+            document.getElementById("transaction_result").innerHTML = "<h3 style='color:red'>Failed, Please make sure the celestia node is available and try again!</h3>";
         });
     });
 }
